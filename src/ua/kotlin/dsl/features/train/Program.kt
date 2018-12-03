@@ -15,7 +15,7 @@ class Program {
             train2.performStep(steps[train2.processor.nextStepToExecute]!!)
         }
         if (train1.position == train2.position) {
-            println("Boom!!")
+            println("Boom!!!")
         }
     }
 }
