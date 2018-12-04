@@ -1,9 +1,9 @@
-package ua.kotlin.dsl.features.train
+package ua.kotlin.dsl.train.puzzle
 
-import ua.kotlin.dsl.features.train.steps.GoTo
-import ua.kotlin.dsl.features.train.steps.IfStop
-import ua.kotlin.dsl.features.train.steps.Right
-import ua.kotlin.dsl.features.train.steps.Step
+import ua.kotlin.dsl.train.puzzle.steps.GoTo
+import ua.kotlin.dsl.train.puzzle.steps.IfStop
+import ua.kotlin.dsl.train.puzzle.steps.Right
+import ua.kotlin.dsl.train.puzzle.steps.Step
 
 class Train(var position: Int, val processor: TrainProcessor = TrainProcessor()) {
 

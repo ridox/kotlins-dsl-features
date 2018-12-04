@@ -1,4 +1,4 @@
-package ua.kotlin.dsl.features.train
+package ua.kotlin.dsl.train.puzzle
 
 fun main(args: Array<String>) {
     dsl {

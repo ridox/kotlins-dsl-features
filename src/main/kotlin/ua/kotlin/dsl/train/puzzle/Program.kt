@@ -1,4 +1,4 @@
-package ua.kotlin.dsl.features.train
+package ua.kotlin.dsl.train.puzzle
 
 class Program {
     fun runProgram(context: DslContext) {
