@@ -9,7 +9,7 @@ object dsl {
 
     operator fun invoke(init: DslContext.() -> DslContext) {
         val context = DslContext().init()
-        Program().runProgram(context)
+        Program(context).runProgram()
     }
 }
 
@@ -17,7 +17,7 @@ class DslContext {
     val steps = mutableMapOf<Int, Step>()
 
     fun step(stepNumber: Int, init: StepContext.() -> Step): DslContext {
-        val step = StepContext().init()
+        val step = StepContext().let(init)
         steps[stepNumber] = step
         return this
     }

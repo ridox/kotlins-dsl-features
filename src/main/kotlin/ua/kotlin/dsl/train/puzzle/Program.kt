@@ -1,8 +1,8 @@
 package ua.kotlin.dsl.train.puzzle
 
-class Program {
-    fun runProgram(context: DslContext) {
-        val steps = context.steps
+class Program(private val dsl: DslContext) {
+    fun runProgram() {
+        val steps = dsl.steps
         val train1 = Train(-1)
         val train2 = Train(1)
         while (train1.processor.nextStepToExecute < steps.size
