@@ -6,4 +6,5 @@ fun String.hello():String {
 
 println("Vova".hello())
 
+//show BD?
 //show shouldBeEqual

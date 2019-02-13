@@ -27,7 +27,6 @@ package ua.kotlin.dsl.java.not.have.demo1
 // Object expression
 
 
-
 //functions
 //As which language is called functional
 //Kotlin follows Pascal convention of passing parameters
@@ -43,4 +42,3 @@ package ua.kotlin.dsl.java.not.have.demo1
 
 //extension functions
 
-//->First class delegation
