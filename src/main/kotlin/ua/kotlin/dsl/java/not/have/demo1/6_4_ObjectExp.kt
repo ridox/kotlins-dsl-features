@@ -11,11 +11,11 @@ import javax.swing.JPanel
 fun main(args: Array<String>) {
     JPanel().addMouseListener(object : MouseAdapter() {
         override fun mouseClicked(e: MouseEvent) {
-            TODO()
+            print("mouseClicked")
         }
 
         override fun mouseEntered(e: MouseEvent) {
-            TODO()
+            print("mouseEntered")
         }
     })
 

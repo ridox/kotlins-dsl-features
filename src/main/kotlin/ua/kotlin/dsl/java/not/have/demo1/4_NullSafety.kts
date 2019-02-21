@@ -18,3 +18,6 @@ println(a)
 println(a.length)
 println(b)
 println(b?.length)
+
+
+TODO("show Elvis operator")
