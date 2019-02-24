@@ -11,6 +11,6 @@ fun main(args: Array<String>) {
     //person1.age = 21
 }
 
-//Show companion here
+//Show companion here (Ded sample)
 
 

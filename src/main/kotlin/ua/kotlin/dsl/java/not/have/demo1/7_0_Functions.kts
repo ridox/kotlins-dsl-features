@@ -8,23 +8,18 @@ fun addNumbers1(a: Int, b: Int): Int {
 }
 
 fun addNumbers2(a: Int, b: Int) = a + b
-println(addNumbers1(3, 2))
-println(addNumbers2(3, 2))
 
-
-data class Person(val name: String, val age: Int)
 fun createPerson(name: String = "John Doe", age: Int = 0) = Person(name, age)
-println(createPerson(age = 33, name = "Alice"))
+createPerson()
 
-
-fun numericOperation(x: Int, y: Int, func: (Int, Int) -> Int): Int {
-    return func(x, y)
+fun numericOperation(a: Int, b: Int, op: (Int, Int) -> Int): Int {
+    return op(a, b)
 }
 numericOperation(4, 2, ::addNumbers2)
 numericOperation(4, 2, { a, b -> a * b })
 
-fun numericOperationSingle(x: Int, func: (Int) -> Int): Int {
-    return func(x)
+fun numericOperationSingle(x: Int, op: (Int) -> Int): Int {
+    return op(x)
 }
 numericOperationSingle(3) { it + 1 }
 
@@ -37,8 +32,10 @@ fun using(obj: Closeable, block: () -> Unit) {
     }
 }
 
-val file  = File("/tmp/1.txt").outputStream()
-using(file) {
+val file = File("/tmp/1.txt")
+val fileStream  = file.outputStream()
+
+using(fileStream) {
     val string = "Hello".toByteArray()
-    file.write(string)
+    fileStream.write(string)
 }

@@ -5,13 +5,15 @@ package ua.kotlin.dsl.java.not.have.demo1
 // val and var, types can be omitted
 
 //Tell about string interpolation
+// show error message as an example
 
 //nullsafety
 //no nullable types
 //show let function in terms of check if !=null
+//show elvis operator
 
-//collections
-//ranges
+//collections, show how to initialize aMethod Map
+//ranges, show on "for" example
 
 
 // Classes
@@ -22,7 +24,7 @@ package ua.kotlin.dsl.java.not.have.demo1
 // Data classes
 // Sealed classes
 //  * smart cast
-//  * `when` can be used either as an expression or as a statement.
+//  * `when` can be used either as an expression or as aMethod statement.
 // Object declaration - singletons
 // Object expression
 
