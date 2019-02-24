@@ -12,7 +12,7 @@ package ua.kotlin.dsl.java.not.have.demo1
 //show let function in terms of check if !=null
 //show elvis operator
 
-//collections, show how to initialize aMethod Map
+//collections, show how to initialize Map
 //ranges, show on "for" example
 
 

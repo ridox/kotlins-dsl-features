@@ -15,7 +15,7 @@ createPerson()
 fun numericOperation(a: Int, b: Int, op: (Int, Int) -> Int): Int {
     return op(a, b)
 }
-numericOperation(4, 2, ::addNumbers2)
+numericOperation(4, 2, ::addNumbers1)
 numericOperation(4, 2, { a, b -> a * b })
 
 fun numericOperationSingle(x: Int, op: (Int) -> Int): Int {
@@ -24,7 +24,6 @@ fun numericOperationSingle(x: Int, op: (Int) -> Int): Int {
 numericOperationSingle(3) { it + 1 }
 
 fun using(obj: Closeable, block: () -> Unit) {
-    //show how it can be replaced with use
     try {
         block()
     } finally {
