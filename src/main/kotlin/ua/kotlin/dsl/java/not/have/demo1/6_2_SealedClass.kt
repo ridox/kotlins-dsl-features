@@ -1,5 +1,7 @@
 package ua.kotlin.dsl.java.not.have.demo1
 
+//CAN BE SKIPPED
+
 fun main(args: Array<String>) {
     val expression = Sum(Const(1.0), Const(1.0)) // 1.0 + 1.0
     println(eval(expression))

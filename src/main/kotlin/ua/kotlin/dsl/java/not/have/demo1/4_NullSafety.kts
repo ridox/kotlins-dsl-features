@@ -15,15 +15,3 @@ var b: String? = "this is B string"
 //println(message)
 
 
-/*
-var someString: String? = "this is some string"
-
-if (someString != null) {
-    println("The string is not null. Length: ${someString!!.length}")
-}
-
-someString?.let {
-    println("The string is not null. Length: ${it.length}")
-}
-*/
-
