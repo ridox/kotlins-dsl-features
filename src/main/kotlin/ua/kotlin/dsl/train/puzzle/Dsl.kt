@@ -5,19 +5,15 @@ import ua.kotlin.dsl.train.puzzle.steps.IfStop
 import ua.kotlin.dsl.train.puzzle.steps.Right
 import ua.kotlin.dsl.train.puzzle.steps.Step
 
-object dsl {
 
-    operator fun invoke(init: DslContext.() -> DslContext) {
-        val context = DslContext().init()
-        Program(context).runProgram()
-    }
+fun dsl(init: DslContext.() -> DslContext) {
+    val context = DslContext(mutableMapOf()).init()
+    Program(context, -10, 1).runProgram()
 }
 
-class DslContext {
-    val steps = mutableMapOf<Int, Step>()
-
-    fun step(stepNumber: Int, init: StepContext.() -> Step): DslContext {
-        val step = StepContext().let(init)
+class DslContext(val steps: MutableMap<Int, Step>) {
+    fun step(stepNumber: Int, createStep: StepContext.() -> Step): DslContext {
+        val step = StepContext().createStep()
         steps[stepNumber] = step
         return this
     }
@@ -45,4 +41,15 @@ class StepContextInternal : StepContext() {
     }
 
 }
+
+
+
+/*object dsl {
+
+    operator fun invoke(init: DslContext.() -> DslContext) {
+        val context = DslContext(mutableMapOf()).init()
+        Program(context, -1, 1).runProgram()
+    }
+}*/
+
 

@@ -1,10 +1,10 @@
 package ua.kotlin.dsl.train.puzzle
 
-class Program(private val dsl: DslContext) {
+class Program(private val dsl: DslContext, private val trainOnePosition:Int, private val trainTwoPosition: Int) {
     fun runProgram() {
         val steps = dsl.steps
-        val train1 = Train(-1)
-        val train2 = Train(1)
+        val train1 = Train(trainOnePosition)
+        val train2 = Train(trainTwoPosition)
         while (train1.processor.nextStepToExecute < steps.size
             && train2.processor.nextStepToExecute < steps.size
             && train1.position != train2.position

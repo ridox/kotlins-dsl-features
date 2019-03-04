@@ -6,8 +6,6 @@ class Car {
     }
 }
 
-println("Let's drive aMethod car")
-
 val car = Car()
 
 car drive 10
