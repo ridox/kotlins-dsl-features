@@ -6,7 +6,5 @@ class Car {
     }
 }
 
-val car = Car()
-
-car drive 10
+Car() drive 10
 
